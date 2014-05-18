@@ -1,0 +1,4 @@
+name: codeclicker
+description: A web application
+dependencies:
+  browser: any
