@@ -1,19 +1,35 @@
+library codeclicker;
+
 import "dart:html";
 
-var loc = 0;
+part "src/codeclicker.dart";
+
+CodeClicker cc;
 
 void main() {
-  querySelectorAll(".writeline").onClick.listen(writeLine);
-  update();
+  cc = new CodeClicker();
+  querySelectorAll(".writeline").onClick.listen(cc.click);
+  querySelectorAll(".addlocsec").onClick.listen(addlocsec);
+  
+  
+  window.animationFrame.then(gameLoop);
 }
 
-writeLine([_]){
-  loc += 1;
+addlocsec([_]){
+  cc.locsec += 1;
+}
+
+gameLoop([_]){
+  cc.update();
   update();
+  window.animationFrame.then(gameLoop);
 }
 
 update(){
   querySelectorAll(".loc").forEach((Element e){
-    e.text = loc.toString();
+    e.text = cc.loc.toString();
+  });
+  querySelectorAll(".locsec").forEach((Element e){
+    e.text = cc.locsec.toString();
   });
 }
