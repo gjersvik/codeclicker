@@ -3,6 +3,7 @@ library codeclicker;
 import "dart:html";
 
 part "src/codeclicker.dart";
+part "src/item.dart";
 
 CodeClicker cc;
 
