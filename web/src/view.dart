@@ -19,6 +19,7 @@ class View{
     _setText(querySelectorAll(".locsec"),cc.locs);
     cc.factories.asMap().forEach((int key, Factory fact){
       _setText(querySelectorAll(".name.tier$key"), fact.name);
+      _setText(querySelectorAll(".price.tier$key"), fact.price);
       _setText(querySelectorAll(".own.tier$key"), fact.own);
       _setText(querySelectorAll(".locs.tier$key"), fact.locs);
       _setText(querySelectorAll(".output.tier$key"), fact.output);
@@ -32,6 +33,7 @@ class View{
   _getTableHead(){
     return """<tr>
         <th>Name</th>
+        <th>Price</th>
         <th>Owns</th>
         <th>Buy</th>
         <th>loc/s</th>
@@ -45,6 +47,7 @@ class View{
       var fact =  cc.factories[i];
       body += """<tr>
       <td class="name tier$i"></td>
+      <td class="price tier$i"></td>
       <td class="own tier$i"></td>
       <td><button class="buy tier$i">Buy</button></td>
       <td class="locs tier$i"></td>

@@ -11,7 +11,7 @@ class Factory{
   
   Factory(this.name, this.baseOutput, this.basePrice, this.cc);
   
-  int get price => this.basePrice + this.basePrice * (pow(1.2, own) - 1);
+  int get price => (this.basePrice * (pow(1.2, own))).toInt();
   num get locs => baseOutput;
   num get output => own * locs;
   
