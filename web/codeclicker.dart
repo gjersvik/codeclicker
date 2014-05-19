@@ -10,14 +10,14 @@ CodeClicker cc;
 void main() {
   cc = new CodeClicker();
   querySelectorAll(".writeline").onClick.listen(cc.click);
-  querySelectorAll(".addlocsec").onClick.listen(addlocsec);
+  querySelectorAll(".buy.tier1").onClick.listen(addlocsec);
   
   
   window.animationFrame.then(gameLoop);
 }
 
 addlocsec([_]){
-  cc.locsec += 1;
+  cc.factories[0].buy();
 }
 
 gameLoop([_]){
@@ -31,6 +31,19 @@ update(){
     e.text = cc.loc.toString();
   });
   querySelectorAll(".locsec").forEach((Element e){
-    e.text = cc.locsec.toString();
+    e.text = cc.locs.toString();
+  });
+  
+  querySelectorAll(".name.tier1").forEach((Element e){
+    e.text = cc.factories[0].name;
+  });
+  querySelectorAll(".own.tier1").forEach((Element e){
+    e.text = cc.factories[0].own.toString();
+  });
+  querySelectorAll(".locs.tier1").forEach((Element e){
+    e.text = cc.factories[0].locs.toString();
+  });
+  querySelectorAll(".output.tier1").forEach((Element e){
+    e.text = cc.factories[0].output.toString();
   });
 }
