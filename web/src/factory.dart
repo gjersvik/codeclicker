@@ -15,7 +15,12 @@ class Factory{
   num get locs => baseOutput;
   num get output => own * locs;
   
+  bool get canBuy => cc.loc >= price;
+  
   buy(){
-    own += 1;
+    if(canBuy){
+      cc.loc -= price;
+      own += 1;
+    }
   }
 }

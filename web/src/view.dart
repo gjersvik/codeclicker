@@ -18,6 +18,9 @@ class View{
     _setText(querySelectorAll(".loc"),cc.loc);
     _setText(querySelectorAll(".locsec"),cc.locs);
     cc.factories.asMap().forEach((int key, Factory fact){
+      querySelectorAll("buy tier$key").forEach((ButtonElement e){
+        e.disabled = !fact.canBuy;
+      });
       _setText(querySelectorAll(".name.tier$key"), fact.name);
       _setText(querySelectorAll(".price.tier$key"), fact.price);
       _setText(querySelectorAll(".own.tier$key"), fact.own);
