@@ -1,6 +1,7 @@
 library codeclicker;
 
 import "dart:html";
+import "dart:math";
 
 part "src/codeclicker.dart";
 part "src/factory.dart";

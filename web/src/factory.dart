@@ -1,14 +1,18 @@
 part of codeclicker;
 
 class Factory{
+  CodeClicker cc;
+  
   final String name;
-  final num base;
+  final num baseOutput;
+  final num basePrice;
   
   int own = 0;
   
-  Factory(this.name, this.base);
+  Factory(this.name, this.baseOutput, this.basePrice, this.cc);
   
-  num get locs => base;
+  int get price => this.basePrice + this.basePrice * (pow(1.2, own) - 1);
+  num get locs => baseOutput;
   num get output => own * locs;
   
   buy(){

@@ -9,14 +9,14 @@ class CodeClicker{
   List<Factory> factories = [];
   
   CodeClicker(){
-    factories.add(new Factory('Punch Cards',1));
-    factories.add(new Factory('Code Monkeys',10));
-    factories.add(new Factory('Servers',100));
-    factories.add(new Factory('Hackers',1337)); // 1337 and 31337
-    factories.add(new Factory('Start Ups',100000));
-    factories.add(new Factory('Clouds',10000000));
-    factories.add(new Factory('AIs',1000000000));
-    factories.add(new Factory('Cosmological Computers',420000000000)); // 42 someting
+    _add('Punch Cards',1,10);
+    _add('Code Monkeys',10,100);
+    _add('Servers',100,1000);
+    _add('Hackers',1337,31337); // 1337 and 31337
+    _add('Start Ups',100000,1000000);
+    _add('Clouds',10000000,100000000);
+    _add('AIs',1000000000,10000000000);
+    _add('Cosmological Computers',420000000000,4200000000000); // 42 someting
   }
   
   num get locs => factories.fold(0,(num sum, Factory fact) => sum + fact.output);
@@ -35,5 +35,9 @@ class CodeClicker{
       _decimal -= interger;
       loc += interger;
     }
+  }
+  
+  _add(String name, int output, int price){
+    factories.add(new Factory(name, output, price, this));
   }
 }
