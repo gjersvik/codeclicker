@@ -1,6 +1,6 @@
 part of codeclicker;
 
-class Item{
+class Factory{
   String name = 'Tier1';
   int own= 0;
   double locs = 1.0;

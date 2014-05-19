@@ -6,13 +6,13 @@ class CodeClicker{
   double _decimal = 0.0;
   Stopwatch _timer = new Stopwatch()..start();
   
-  List<Item> factories = [];
+  List<Factory> factories = [];
   
   CodeClicker(){
-    factories.add(new Item());
+    factories.add(new Factory());
   }
   
-  num get locs => factories.fold(0,(num sum, Item fact) => sum + fact.output);
+  num get locs => factories.fold(0,(num sum, Factory fact) => sum + fact.output);
   
   click([_]){
     loc += 1;
