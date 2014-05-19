@@ -1,11 +1,15 @@
 part of codeclicker;
 
 class Factory{
-  String name = 'Tier1';
-  int own= 0;
-  double locs = 1.0;
+  final String name;
+  final num base;
   
-  double get output => own * locs;
+  int own = 0;
+  
+  Factory(this.name, this.base);
+  
+  num get locs => base;
+  num get output => own * locs;
   
   buy(){
     own += 1;
