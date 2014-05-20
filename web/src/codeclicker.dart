@@ -24,6 +24,17 @@ class CodeClicker{
   
   work() => addLoc(worker.line);
   
+  void buy(Buyable product){
+    if(product.price == 0) {
+      return;
+    }
+    if(product.price > loc){
+      return;
+    }
+    loc -= product.price;
+    product.buy();
+  }
+  
   update(){
     var sec = _timer.elapsedTicks / _timer.frequency;
     _timer.reset();
@@ -40,6 +51,6 @@ class CodeClicker{
   }
   
   _add(String name, int output, int price){
-    factories.add(new Factory(name, output, price, this));
+    factories.add(new Factory(name, output, price));
   }
 }
