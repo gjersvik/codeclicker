@@ -30,7 +30,11 @@ class View{
   }
   
   _setText(ElementList list, Object value){
-    list.forEach((Element e) => e.text = value.toString());
+    list.forEach((Element e){
+      if(e.text != value.toString()){
+        e.text = value.toString();
+      }
+    });
   }
   
   _getTableHead(){
