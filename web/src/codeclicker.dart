@@ -2,9 +2,10 @@ part of codeclicker;
 
 class CodeClicker{
   int loc = 0;
-  
   double _decimal = 0.0;
+  
   Stopwatch _timer = new Stopwatch()..start();
+  Work worker = new Work();
   
   List<Factory> factories = [];
   
@@ -21,15 +22,16 @@ class CodeClicker{
   
   num get locs => factories.fold(0,(num sum, Factory fact) => sum + fact.output);
   
-  click([_]){
-    loc += 1;
-  }
+  work() => addLoc(worker.line);
   
   update(){
     var sec = _timer.elapsedTicks / _timer.frequency;
     _timer.reset();
-    
-    _decimal += sec * locs;
+    addLoc(sec * locs);
+  }
+  
+  addLoc(num lines){
+    _decimal += lines;
     if(_decimal >= 1.0){
       var interger = _decimal.toInt();
       _decimal -= interger;

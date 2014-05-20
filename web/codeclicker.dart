@@ -6,6 +6,7 @@ import "dart:math";
 part "src/codeclicker.dart";
 part "src/factory.dart";
 part "src/view.dart";
+part "src/work.dart";
 
 CodeClicker cc;
 View view;

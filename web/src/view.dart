@@ -8,7 +8,7 @@ class View{
     table.querySelector("thead").innerHtml = _getTableHead();
     table.querySelector("tbody").innerHtml = _getTableBody();
     
-    querySelectorAll(".writeline").onClick.listen(cc.click);
+    querySelectorAll(".writeline").onClick.listen((_) => cc.work());
     cc.factories.asMap().forEach((int key, Factory fact){
       querySelectorAll(".buy.tier$key").onClick.listen((_) => fact.buy());
     });
