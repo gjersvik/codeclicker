@@ -7,6 +7,7 @@ part "src/achievement.dart";
 part "src/buyable.dart";
 part "src/codeclicker.dart";
 part "src/factory.dart";
+part "src/research.dart";
 part "src/view.dart";
 part "src/work.dart";
 

@@ -8,6 +8,7 @@ class CodeClicker{
   Work worker = new Work();
   
   List<Factory> factories = [];
+  List<Research> research = [];
   
   final Achievements achievements = new Achievements();
   
