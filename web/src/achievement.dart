@@ -3,20 +3,15 @@ part of codeclicker;
 class Achievement{
   final String name;
   final Function _test;
-  final Function _action;
   
   bool earned = false;
   
-  Achievement(this.name, this._test, this._action);
+  Achievement(this.name, this._test);
   
   bool test(){
-    var result = _test();
-    if(result){
-      if(earned == false){
-        _action();
-        earned = true;
-      }
-      return result;
+    if(_test()){
+      earned = true;
+      return true;
     }else{
       return false;
     }
@@ -30,8 +25,8 @@ class Achievements{
   
   Achievements();
   
-  add(String name, bool test(), void action()){
-    var a = new Achievement(name, test, action);
+  add(String name, bool test()){
+    var a = new Achievement(name, test);
     _all.add(a);
     _unerned.add(a);
   }
