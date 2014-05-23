@@ -73,6 +73,6 @@ class CodeClicker{
   }
   
   _add(String name, int output, int price){
-    factories.add(new Factory(name, output, price));
+    factories.add(new Factory(name, name, output, price));
   }
 }
