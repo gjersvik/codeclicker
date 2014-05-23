@@ -25,6 +25,8 @@ class Achievements{
   
   Achievements();
   
+  num get rockstar => 1.0 + _earned.length * 0.05;
+  
   add(String name, bool test()){
     var a = new Achievement(name, test);
     all.add(a);

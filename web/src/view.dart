@@ -34,6 +34,8 @@ class View{
         li.style.textDecoration = "line-through";
       }
     });
+    
+    _setText(querySelectorAll(".rockstar"),cc.achievements.rockstar);
   }
   
   _setText(ElementList list, Object value){
