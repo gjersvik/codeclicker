@@ -9,6 +9,7 @@ part "src/codeclicker.dart";
 part "src/factory.dart";
 part "src/research.dart";
 part "src/item.dart";
+part "src/names.dart";
 part "src/view.dart";
 part "src/work.dart";
 

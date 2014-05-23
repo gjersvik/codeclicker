@@ -2,6 +2,7 @@ part of codeclicker;
 
 class View{
   CodeClicker cc;
+  Names names = new Names();
   
   View(this.cc){
     querySelectorAll(".writeline").onClick.listen((_) => cc.work());
@@ -33,7 +34,6 @@ class View{
     _setText(querySelectorAll(".loc"),cc.loc);
     _setText(querySelectorAll(".locsec"),cc.locs);
     cc.factories.asMap().forEach((int key, Factory fact){
-      _setText(querySelectorAll(".name.tier$key"), fact.name);
       _setText(querySelectorAll(".price.tier$key"), fact.price);
       _setText(querySelectorAll(".own.tier$key"), fact.own);
       _setText(querySelectorAll(".locs.tier$key"), fact.locs);
@@ -74,13 +74,14 @@ class View{
     var body = "";
     for( var i = 0; i < cc.factories.length; i += 1){
       var fact =  cc.factories[i];
+      var id = fact.id;
       body += """<tr>
-      <td class="name tier$i"></td>
-      <td class="price tier$i"></td>
-      <td class="own tier$i"></td>
-      <td><button class="buy tier$i">Buy</button></td>
-      <td class="locs tier$i"></td>
-      <td class="output tier$i"></td>
+      <td class="name $id">${names.get(id)}</td>
+      <td class="price $id"></td>
+      <td class="own $id"></td>
+      <td><button class="buy $id">Buy</button></td>
+      <td class="locs $id"></td>
+      <td class="output $id"></td>
     </tr>""";
     }
     return body;
@@ -99,7 +100,7 @@ class View{
     for( var i = 0; i < cc.research.length; i += 1){
       var r =  cc.research[i];
       body += """<tr>
-      <td class="name">${r.id}</td>
+      <td class="name">${names.get(r.id)}</td>
       <td class="price">${r.price}</td>
       <td><button class="buy">Buy</button></td>
     </tr>""";

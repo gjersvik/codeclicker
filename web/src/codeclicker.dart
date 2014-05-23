@@ -14,14 +14,14 @@ class CodeClicker{
   final Achievements achievements = new Achievements();
   
   CodeClicker(){
-    _add('Punch Cards',1,10);
-    _add('Code Monkeys',10,100);
-    _add('Servers',100,1000);
-    _add('Hackers',1337,31337); // 1337 and 31337
-    _add('Start Ups',100000,1000000);
-    _add('Clouds',10000000,100000000);
-    _add('AIs',1000000000,10000000000);
-    _add('Cosmological Computers',420000000000,4200000000000); // 42 someting
+    _add('tier0',1,10);
+    _add('tier1',10,100);
+    _add('tier2',100,1000);
+    _add('tier3',1337,31337); // 1337 and 31337
+    _add('tier4',100000,1000000);
+    _add('tier5',10000000,100000000);
+    _add('tier6',1000000000,10000000000);
+    _add('tier7',420000000000,4200000000000); // 42 someting
     
     achievements.add('Punch out (First Punch Card).',
         () => factories[0].own >= 1);
@@ -85,7 +85,7 @@ class CodeClicker{
     }
   }
   
-  _add(String name, int output, int price){
-    factories.add(new Factory(name, name, output, price));
+  _add(String id, int output, int price){
+    factories.add(new Factory(id, output, price));
   }
 }
