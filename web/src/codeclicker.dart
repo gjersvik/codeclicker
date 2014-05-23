@@ -32,6 +32,11 @@ class CodeClicker{
         () => factories[0].own >= 50);
     achievements.add('IBM Master (100 Punch Card).',
         () => factories[0].own >= 100);
+    
+    research.add(new Research('Dummy1', 100, () => loc += 100));
+    research.add(new Research('Dummy2', 1000, () => loc += 1000));
+    research.add(new Research('Dummy3', 10000, () => loc += 10000));
+    research.add(new Research('Dummy4', 100000, () => loc += 100000));
   }
   
   num get locs => factories.fold(0,(num sum, Factory fact)=>sum + fact.output)
@@ -39,15 +44,16 @@ class CodeClicker{
   
   work() => addLoc(worker.line * achievements.rockstar);
   
-  void buy(Buyable product){
+  bool buy(Buyable product){
     if(product.price == 0) {
-      return;
+      return false;
     }
     if(product.price > loc){
-      return;
+      return false;
     }
     loc -= product.price;
     product.buy();
+    return true;
   }
   
   update(){

@@ -4,16 +4,29 @@ class View{
   CodeClicker cc;
   
   View(this.cc){
+    querySelectorAll(".writeline").onClick.listen((_) => cc.work());
+    
     var table = querySelector("#factory");
     table.querySelector("thead").innerHtml = _getTableHead();
     table.querySelector("tbody").innerHtml = _getTableBody();
-    
-    querySelector("#achievement").innerHtml = _getAchievementList();
-    
-    querySelectorAll(".writeline").onClick.listen((_) => cc.work());
     cc.factories.asMap().forEach((int key, Factory fact){
       querySelectorAll(".buy.tier$key").onClick.listen((_) => cc.buy(fact));
     });
+    
+    querySelector("#achievement").innerHtml = _getAchievementList();
+    
+    querySelector("#research thead").innerHtml = _getResearchHead();
+    querySelector("#research tbody").innerHtml = _getResearchBody();
+    var map = new Map.fromIterables(
+        querySelectorAll("#research .buy"), cc.research);
+    map.forEach((Element button, Research r){
+      button.onClick.listen((_){
+        if(cc.buy(r)){
+          button.parent.parent.remove();
+        }
+      });
+    });
+    
   }
   
   update(){
@@ -68,6 +81,27 @@ class View{
       <td><button class="buy tier$i">Buy</button></td>
       <td class="locs tier$i"></td>
       <td class="output tier$i"></td>
+    </tr>""";
+    }
+    return body;
+  }
+  
+  _getResearchHead(){
+    return """<tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Buy</th>
+      </tr>""";
+  }
+  
+  _getResearchBody(){
+    var body = "";
+    for( var i = 0; i < cc.research.length; i += 1){
+      var r =  cc.research[i];
+      body += """<tr>
+      <td class="name">${r.name}</td>
+      <td class="price">${r.price}</td>
+      <td><button class="buy">Buy</button></td>
     </tr>""";
     }
     return body;
