@@ -1,12 +1,11 @@
 part of codeclicker;
 
-class Research extends Buyable{
-  final String name;
+class Research extends Item implements Buyable{
   final Function _effect;
   
   int price;
   
-  Research(this.name, this.price, this._effect);
+  Research(String id, this.price, this._effect):super(id);
   
   buy(){
     _effect();

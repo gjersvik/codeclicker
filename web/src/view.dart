@@ -99,7 +99,7 @@ class View{
     for( var i = 0; i < cc.research.length; i += 1){
       var r =  cc.research[i];
       body += """<tr>
-      <td class="name">${r.name}</td>
+      <td class="name">${r.id}</td>
       <td class="price">${r.price}</td>
       <td><button class="buy">Buy</button></td>
     </tr>""";
