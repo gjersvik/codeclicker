@@ -8,6 +8,8 @@ class View{
     table.querySelector("thead").innerHtml = _getTableHead();
     table.querySelector("tbody").innerHtml = _getTableBody();
     
+    querySelector("#achievement").innerHtml = _getAchievementList();
+    
     querySelectorAll(".writeline").onClick.listen((_) => cc.work());
     cc.factories.asMap().forEach((int key, Factory fact){
       querySelectorAll(".buy.tier$key").onClick.listen((_) => cc.buy(fact));
@@ -23,6 +25,14 @@ class View{
       _setText(querySelectorAll(".own.tier$key"), fact.own);
       _setText(querySelectorAll(".locs.tier$key"), fact.locs);
       _setText(querySelectorAll(".output.tier$key"), fact.output);
+    });
+    
+    var map = new Map.fromIterables(
+        querySelectorAll("#achievement li"), cc.achievements.all);
+    map.forEach((Element li, Achievement a){
+      if(a.earned){
+        li.style.textDecoration = "line-through";
+      }
     });
   }
   
@@ -58,6 +68,14 @@ class View{
       <td class="output tier$i"></td>
     </tr>""";
     }
+    return body;
+  }
+  
+  _getAchievementList(){
+    var body = "";
+    cc.achievements.all.forEach((Achievement a){
+      body += "<li>${a.name}</li>";
+    });
     return body;
   }
 }

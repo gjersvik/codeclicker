@@ -19,7 +19,7 @@ class Achievement{
 }
 
 class Achievements{
-  final List<Achievement> _all = new List();
+  final List<Achievement> all = new List();
   final Set<Achievement> _earned = new Set();
   final Set<Achievement> _unerned = new Set();
   
@@ -27,12 +27,12 @@ class Achievements{
   
   add(String name, bool test()){
     var a = new Achievement(name, test);
-    _all.add(a);
+    all.add(a);
     _unerned.add(a);
   }
   
   test(){
-    var acrived = _unerned.where((a) => a.test());
+    var acrived = _unerned.where((a) => a.test()).toSet();
     if(acrived.isNotEmpty){
       _unerned.removeAll(acrived);
       _earned.addAll(acrived);
