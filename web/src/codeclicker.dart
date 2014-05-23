@@ -3,6 +3,7 @@ part of codeclicker;
 class CodeClicker{
   int loc = 0;
   double _decimal = 0.0;
+  double _workOfLocs = 0.0;
   
   Stopwatch _timer = new Stopwatch()..start();
   Work worker = new Work();
@@ -33,16 +34,28 @@ class CodeClicker{
     achievements.add('IBM Master (100 Punch Card).',
         () => factories[0].own >= 100);
     
-    research.add(new Research('Dummy1', 100, () => loc += 100));
-    research.add(new Research('Dummy2', 1000, () => loc += 1000));
-    research.add(new Research('Dummy3', 10000, () => loc += 10000));
-    research.add(new Research('Dummy4', 100000, () => loc += 100000));
+    research.add(new Research('work_x2_1', 100, () => worker.researchFactor *= 2));
+    research.add(new Research('work_x2_2', 500, () => worker.researchFactor *= 2));
+    research.add(new Research('work_x2_3', 1000, () => worker.researchFactor *= 2));
+    research.add(new Research('work_x4_1', 40000, () => worker.researchFactor *= 4));
+    research.add(new Research('work_x4_2', 400000, () => worker.researchFactor *= 4));
+    research.add(new Research('work_x4_3', 4000000, () => worker.researchFactor *= 4));
+    research.add(new Research('work_x10_1', 100000000, () => worker.researchFactor *= 10));
+    research.add(new Research('work_x10_2', 100000000000, () => worker.researchFactor *= 10));
+    
+    research.add(new Research('work_locs_1', 256, () => _workOfLocs += 0.01));
+    research.add(new Research('work_locs_1', 2560, () => _workOfLocs += 0.015));
+    research.add(new Research('work_locs_1', 25600, () => _workOfLocs += 0.025));
+    research.add(new Research('work_locs_1', 2560000, () => _workOfLocs += 0.05));
+    research.add(new Research('work_locs_1', 256000000, () => _workOfLocs += 0.05));
+    research.add(new Research('work_locs_1', 25600000000, () => _workOfLocs += 0.1));
   }
   
   num get locs => factories.fold(0,(num sum, Factory fact)=>sum + fact.output)
       * achievements.rockstar;
+  num get perClick => (worker.line + _workOfLocs * locs) * achievements.rockstar;
   
-  work() => addLoc(worker.line * achievements.rockstar);
+  work() => addLoc(perClick);
   
   bool buy(Buyable product){
     if(product.price == 0) {
