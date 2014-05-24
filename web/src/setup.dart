@@ -33,10 +33,13 @@ setup(CodeClicker cc){
   ];
   cc.research.addAll(research);
   
-  cc.achievements.add('a_tier0_1', () => factories[0].own >= 1);
-  cc.achievements.add('a_tier0_10', () => factories[0].own >= 10);
-  cc.achievements.add('a_tier0_25', () => factories[0].own >= 25);
-  cc.achievements.add('a_tier0_50', () => factories[0].own >= 50);
-  cc.achievements.add('a_tier0_100', () => factories[0].own >= 100);
+  var achievements = [
+    new Achievement('a_tier0_1', () => factories[0].own >= 1),
+    new Achievement('a_tier0_10', () => factories[0].own >= 10),
+    new Achievement('a_tier0_25', () => factories[0].own >= 25),
+    new Achievement('a_tier0_50', () => factories[0].own >= 50),
+    new Achievement('a_tier0_100', () => factories[0].own >= 100)
+  ];
+  cc.achievements.addAll(achievements);
  
 }

@@ -3,6 +3,8 @@ library codeclicker;
 import "dart:html";
 import "dart:math";
 
+import "package:collection/wrappers.dart";
+
 part "src/achievement.dart";
 part "src/buyable.dart";
 part "src/codeclicker.dart";

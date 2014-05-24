@@ -17,26 +17,13 @@ class Achievement extends Item{
   }
 }
 
-class Achievements{
-  final List<Achievement> all = new List();
-  final Set<Achievement> _earned = new Set();
-  final Set<Achievement> _unerned = new Set();
+class Achievements extends DelegatingList<Achievement>{
+  Achievements():super([]);
   
-  Achievements();
+  Iterable<Achievement> get earned => where((a) => a.earned);
+  Iterable<Achievement> get unerned => where((a) => !a.earned);
   
-  num get rockstar => 1.0 + _earned.length * 0.05;
+  num get rockstar => 1.0 + earned.length * 0.05;
   
-  add(String name, bool test()){
-    var a = new Achievement(name, test);
-    all.add(a);
-    _unerned.add(a);
-  }
-  
-  test(){
-    var acrived = _unerned.where((a) => a.test()).toSet();
-    if(acrived.isNotEmpty){
-      _unerned.removeAll(acrived);
-      _earned.addAll(acrived);
-    }
-  }
+  test() => unerned.forEach((a) => a.test());
 }

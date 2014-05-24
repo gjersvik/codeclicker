@@ -41,7 +41,7 @@ class View{
     });
     
     var map = new Map.fromIterables(
-        querySelectorAll("#achievement li"), cc.achievements.all);
+        querySelectorAll("#achievement li"), cc.achievements);
     map.forEach((Element li, Achievement a){
       if(a.earned){
         li.style.textDecoration = "line-through";
@@ -110,7 +110,7 @@ class View{
   
   _getAchievementList(){
     var body = "";
-    cc.achievements.all.forEach((Achievement a){
+    cc.achievements.forEach((Achievement a){
       body += "<li>${names.get(a.id)}</li>";
     });
     return body;
