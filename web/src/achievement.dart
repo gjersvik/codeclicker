@@ -1,12 +1,11 @@
 part of codeclicker;
 
-class Achievement{
-  final String name;
+class Achievement extends Item{
   final Function _test;
   
   bool earned = false;
   
-  Achievement(this.name, this._test);
+  Achievement(String name, this._test): super(name);
   
   bool test(){
     if(_test()){

@@ -111,7 +111,7 @@ class View{
   _getAchievementList(){
     var body = "";
     cc.achievements.all.forEach((Achievement a){
-      body += "<li>${a.name}</li>";
+      body += "<li>${names.get(a.id)}</li>";
     });
     return body;
   }

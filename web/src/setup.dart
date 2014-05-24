@@ -33,10 +33,10 @@ setup(CodeClicker cc){
   ];
   cc.research.addAll(research);
   
-  cc.achievements.add('Punch out (First Punch Card).', () => factories[0].own >= 1);
-  cc.achievements.add('Just enough for hallo world (10 Punch Card).', () => factories[0].own >= 10);
-  cc.achievements.add('Mainframe (25 Punch Card).', () => factories[0].own >= 25);
-  cc.achievements.add('Holy crap (50 Punch Card).', () => factories[0].own >= 50);
-  cc.achievements.add('IBM Master (100 Punch Card).', () => factories[0].own >= 100);
+  cc.achievements.add('a_tier0_1', () => factories[0].own >= 1);
+  cc.achievements.add('a_tier0_10', () => factories[0].own >= 10);
+  cc.achievements.add('a_tier0_25', () => factories[0].own >= 25);
+  cc.achievements.add('a_tier0_50', () => factories[0].own >= 50);
+  cc.achievements.add('a_tier0_100', () => factories[0].own >= 100);
  
 }
