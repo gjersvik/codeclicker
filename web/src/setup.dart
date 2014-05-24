@@ -14,14 +14,14 @@ setup(CodeClicker cc){
   cc.factories.addAll(factories);
 
   var research = [
-    new Research('r_work_x2_1', 100, () => cc.worker.researchFactor *= 2),
-    new Research('r_work_x2_2', 500, () => cc.worker.researchFactor *= 2),
-    new Research('r_work_x2_3', 1000, () => cc.worker.researchFactor *= 2),
-    new Research('r_work_x4_1', 40000, () => cc.worker.researchFactor *= 4),
-    new Research('r_work_x4_2', 400000, () => cc.worker.researchFactor *= 4),
-    new Research('r_work_x4_3', 4000000, () => cc.worker.researchFactor *= 4),
-    new Research('r_work_x10_1', 100000000, () => cc.worker.researchFactor *= 10),
-    new Research('r_work_x10_2', 100000000000, () => cc.worker.researchFactor *= 10),
+    new Research('r_work_x2_0', 100, () => cc.worker.researchFactor *= 2),
+    new Research('r_work_x2_1', 500, () => cc.worker.researchFactor *= 2),
+    new Research('r_work_x2_2', 1000, () => cc.worker.researchFactor *= 2),
+    new Research('r_work_x4_0', 40000, () => cc.worker.researchFactor *= 4),
+    new Research('r_work_x4_1', 400000, () => cc.worker.researchFactor *= 4),
+    new Research('r_work_x4_2', 4000000, () => cc.worker.researchFactor *= 4),
+    new Research('r_work_x10_0', 100000000, () => cc.worker.researchFactor *= 10),
+    new Research('r_work_x10_1', 100000000000, () => cc.worker.researchFactor *= 10),
     
     new Research('r_work_locs_0', 256, () => cc._workOfLocs += 0.01),
     new Research('r_work_locs_1', 2560, () => cc._workOfLocs += 0.015),
@@ -31,6 +31,17 @@ setup(CodeClicker cc){
     new Research('r_work_locs_5', 25600000000, () => cc._workOfLocs += 0.1)
   ];
   cc.research.addAll(research);
+  
+  var factoryResearch = factories.expand((Factory f){
+    return [
+      new Research('r_${f.id}_x2_0', f.basePrice * 100 , () => f.research *= 2),
+      new Research('r_${f.id}_x2_1', f.basePrice * 1000, () => f.research *= 2),
+      new Research('r_${f.id}_x2_2', f.basePrice * 10000, () => f.research *= 2),
+      new Research('r_${f.id}_x4_0', f.basePrice * 100000, () => f.research *= 4)
+    ];
+  });
+  cc.research.addAll(factoryResearch);
+  
   
   var achievements = [
     

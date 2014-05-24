@@ -8,15 +8,14 @@ class CodeClicker{
   Stopwatch _timer = new Stopwatch()..start();
   Work worker = new Work();
   
-  List<Factory> factories = [];
+  Factories factories = new Factories();
   List<Research> research = [];
   
   final Achievements achievements = new Achievements();
   
   CodeClicker();
   
-  num get locs => factories.fold(0,(num sum, Factory fact)=>sum + fact.output)
-      * achievements.rockstar;
+  num get locs => factories.locs * achievements.rockstar;
   num get perClick => (worker.line + _workOfLocs * locs) * achievements.rockstar;
   
   work() => addLoc(perClick);
