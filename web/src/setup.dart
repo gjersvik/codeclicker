@@ -42,6 +42,14 @@ setup(CodeClicker cc){
   });
   cc.research.addAll(factoryResearch);
   
+  var rockstarResearch = [
+    new Research('r_rockstar_0', 31337, () => cc.achievements.rockstarFact += 0.05),
+    new Research('r_rockstar_1', 3133731337, () => cc.achievements.rockstarFact += 0.05),
+    new Research('r_rockstar_2', 313373133731337, () => cc.achievements.rockstarFact += 0.05),
+  ];
+  cc.research.addAll(rockstarResearch);
+  
+  
   
   var achievements = [
     

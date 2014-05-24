@@ -18,12 +18,14 @@ class Achievement extends Item{
 }
 
 class Achievements extends DelegatingList<Achievement>{
+  double rockstarFact = 0.05;
+  
   Achievements():super([]);
   
   Iterable<Achievement> get earned => where((a) => a.earned);
   Iterable<Achievement> get unerned => where((a) => !a.earned);
   
-  num get rockstar => 1.0 + earned.length * 0.05;
+  num get rockstar => 1.0 + earned.length * rockstarFact;
   
   test() => unerned.forEach((a) => a.test());
 }
