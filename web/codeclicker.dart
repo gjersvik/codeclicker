@@ -7,9 +7,10 @@ part "src/achievement.dart";
 part "src/buyable.dart";
 part "src/codeclicker.dart";
 part "src/factory.dart";
-part "src/research.dart";
 part "src/item.dart";
 part "src/names.dart";
+part "src/research.dart";
+part "src/setup.dart";
 part "src/view.dart";
 part "src/work.dart";
 
@@ -18,6 +19,7 @@ View view;
 
 void main() {
   cc = new CodeClicker();
+  setup(cc);
   view =  new View(cc);
   
   gameLoop([_]){
