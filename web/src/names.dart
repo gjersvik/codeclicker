@@ -22,6 +22,13 @@ class Names{
    _n['r_work_x4_2'] = 'Code Generation (4x lines per click)';
    _n['r_work_x10_0'] = 'Viratual Macine (10x lines per click)';
    _n['r_work_x10_1'] = 'Functinal Programming (10x lines per click)';
+
+   _n['r_work_locs_0'] = 'Examples. (+1% locs per click)';
+   _n['r_work_locs_1'] = 'Api doumenation. (+1.5% locs per click)';
+   _n['r_work_locs_2'] = 'Design patterns. (+2.5% locs per click)';
+   _n['r_work_locs_3'] = 'View Source. (+5% locs per click)';
+   _n['r_work_locs_4'] = 'Opensource. (+5% locs per click)';
+   _n['r_work_locs_5'] = 'Great artists steal. (+10% locs per click)';
  
    _n['a_tier0_1'] = 'Punch out (First Punch Card).';
    _n['a_tier0_10'] = 'Just enough for hallo world (10 Punch Card).';
