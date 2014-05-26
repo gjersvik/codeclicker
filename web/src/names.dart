@@ -54,6 +54,11 @@ class Names{
    _n['r_tier4_x2_1'] = 'Flavor of the month buzzwords. (x2 Start Ups output)';
    _n['r_tier4_x2_2'] = 'Hipster tech. (x2 Start Ups output)';
    _n['r_tier4_x4_0'] = 'Silicon valley. (x4 Start Ups output)';
+   
+   _n['r_tier5_x2_0'] = 'Software as a service. (x2 Clouds output)';
+   _n['r_tier5_x2_1'] = 'Platform as a service. (x2 Clouds output)';
+   _n['r_tier5_x2_2'] = 'Infrastructure as a service (x2 Clouds output)';
+   _n['r_tier5_x4_0'] = 'Service as a service (x4 Clouds output)';
  
    _n['a_tier0_1'] = 'Punch out (First Punch Card).';
    _n['a_tier0_10'] = 'Just enough for hallo world (10 Punch Card).';
