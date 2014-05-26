@@ -44,6 +44,11 @@ class Names{
    _n['r_tier2_x2_1'] = 'Water cooling (x2 Servers output)';
    _n['r_tier2_x2_2'] = 'Virtualization (x2 Servers output)';
    _n['r_tier2_x4_0'] = 'Blade servers (x4 Servers output)';
+   
+   _n['r_tier3_x2_0'] = 'Crackers. (x2 Servers output)';
+   _n['r_tier3_x2_1'] = 'Exploit kits. (x2 Servers output)';
+   _n['r_tier3_x2_2'] = 'Guy Fawkes masks. (x2 Servers output)';
+   _n['r_tier3_x4_0'] = 'Anonymous. (x4 Servers output)';
  
    _n['a_tier0_1'] = 'Punch out (First Punch Card).';
    _n['a_tier0_10'] = 'Just enough for hallo world (10 Punch Card).';
