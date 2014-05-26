@@ -39,6 +39,11 @@ class Names{
    _n['r_tier1_x2_1'] = 'Rugged keyboards (x2 Code Monkeys output)';
    _n['r_tier1_x2_2'] = 'Premium bananas. (x2 Code Monkeys output)';
    _n['r_tier1_x4_0'] = 'Save the rainforest. (x4 Code Monkeys output)';
+   
+   _n['r_tier2_x2_0'] = 'Racks (x2 Servers output)';
+   _n['r_tier2_x2_1'] = 'Water cooling (x2 Servers output)';
+   _n['r_tier2_x2_2'] = 'Virtualization (x2 Servers output)';
+   _n['r_tier2_x4_0'] = 'Blade servers (x4 Servers output)';
  
    _n['a_tier0_1'] = 'Punch out (First Punch Card).';
    _n['a_tier0_10'] = 'Just enough for hallo world (10 Punch Card).';
