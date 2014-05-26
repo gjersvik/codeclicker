@@ -29,6 +29,11 @@ class Names{
    _n['r_work_locs_3'] = 'View Source. (+5% locs per click)';
    _n['r_work_locs_4'] = 'Opensource. (+5% locs per click)';
    _n['r_work_locs_5'] = 'Great artists steal. (+10% locs per click)';
+   
+   _n['r_tier0_x2_0'] = 'Port-A-Punch. (x2 Punch Cards output)';
+   _n['r_tier0_x2_1'] = 'Keypunches. (x2 Punch Cards output)';
+   _n['r_tier0_x2_2'] = 'Card Verifier. (x2 Punch Cards output)';
+   _n['r_tier0_x4_0'] = 'Sorting Machine. (x4 Punch Cards output)';
  
    _n['a_tier0_1'] = 'Punch out (First Punch Card).';
    _n['a_tier0_10'] = 'Just enough for hallo world (10 Punch Card).';
