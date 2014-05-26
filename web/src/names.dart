@@ -57,8 +57,13 @@ class Names{
    
    _n['r_tier5_x2_0'] = 'Software as a service. (x2 Clouds output)';
    _n['r_tier5_x2_1'] = 'Platform as a service. (x2 Clouds output)';
-   _n['r_tier5_x2_2'] = 'Infrastructure as a service (x2 Clouds output)';
-   _n['r_tier5_x4_0'] = 'Service as a service (x4 Clouds output)';
+   _n['r_tier5_x2_2'] = 'Infrastructure as a service. (x2 Clouds output)';
+   _n['r_tier5_x4_0'] = 'Service as a service. (x4 Clouds output)';
+   
+   _n['r_tier6_x2_0'] = 'Machine learning. (x2 AIs output)';
+   _n['r_tier6_x2_1'] = 'Artificial Brains. (x2 AIs output)';
+   _n['r_tier6_x2_2'] = 'Quantum computing. (x2 AIs output)';
+   _n['r_tier6_x4_0'] = 'Self replication. (x4 AIs output)';
  
    _n['a_tier0_1'] = 'Punch out (First Punch Card).';
    _n['a_tier0_10'] = 'Just enough for hallo world (10 Punch Card).';
