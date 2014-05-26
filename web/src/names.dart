@@ -74,11 +74,17 @@ class Names{
    _n['r_rockstar_1'] = 'Ninja tech. (+ 5% Rockstar bonus)';
    _n['r_rockstar_2'] = 'Twitter Fanboys. (+ 5% Rockstar bonus)';
  
-   _n['a_tier0_1'] = 'Punch out (First Punch Card).';
-   _n['a_tier0_10'] = 'Just enough for hallo world (10 Punch Card).';
-   _n['a_tier0_25'] = 'Mainframe (25 Punch Card).';
-   _n['a_tier0_50'] = 'Holy crap (50 Punch Card).';
+   _n['a_tier0_1']   = 'Punch out (First Punch Card).';
+   _n['a_tier0_10']  = 'Just enough for hallo world (10 Punch Card).';
+   _n['a_tier0_25']  = 'Mainframe (25 Punch Card).';
+   _n['a_tier0_50']  = 'Holy crap (50 Punch Card).';
    _n['a_tier0_100'] = 'IBM Master (100 Punch Card).';
+   
+   _n['a_tier1_1']   = 'No more bananas for me. (First Code Monkey).';
+   _n['a_tier1_10']  = 'Zoo (10 Code Monkeys).';
+   _n['a_tier1_25']  = 'Monkey reserve (25 Code Monkeys).';
+   _n['a_tier1_50']  = 'Jane Goodall. (50 Code Monkeys).';
+   _n['a_tier1_100'] = 'Infinite monkey theorem. (100 Code Monkeys).';
   }
   
   get(String id){
