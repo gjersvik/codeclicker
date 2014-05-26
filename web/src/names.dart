@@ -64,6 +64,11 @@ class Names{
    _n['r_tier6_x2_1'] = 'Artificial Brains. (x2 AIs output)';
    _n['r_tier6_x2_2'] = 'Quantum computing. (x2 AIs output)';
    _n['r_tier6_x4_0'] = 'Self replication. (x4 AIs output)';
+   
+   _n['r_tier7_x2_0'] = 'Universe in a box.  (x2 Cosmological Computers output)';
+   _n['r_tier7_x2_1'] = 'Artificial universe. (x2 Cosmological Computers output)';
+   _n['r_tier7_x2_2'] = 'Big bang as a service. (x2 Cosmological Computers output)';
+   _n['r_tier7_x4_0'] = 'Multiple multiversees (x4 Cosmological Computers output)';
  
    _n['a_tier0_1'] = 'Punch out (First Punch Card).';
    _n['a_tier0_10'] = 'Just enough for hallo world (10 Punch Card).';
