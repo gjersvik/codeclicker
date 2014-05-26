@@ -34,6 +34,11 @@ class Names{
    _n['r_tier0_x2_1'] = 'Keypunches. (x2 Punch Cards output)';
    _n['r_tier0_x2_2'] = 'Card Verifier. (x2 Punch Cards output)';
    _n['r_tier0_x4_0'] = 'Sorting Machine. (x4 Punch Cards output)';
+   
+   _n['r_tier1_x2_0'] = 'Code gorillas. (x2 Code Monkeys output)';
+   _n['r_tier1_x2_1'] = 'Rugged keyboards (x2 Code Monkeys output)';
+   _n['r_tier1_x2_2'] = 'Premium bananas. (x2 Code Monkeys output)';
+   _n['r_tier1_x4_0'] = 'Save the rainforest. (x4 Code Monkeys output)';
  
    _n['a_tier0_1'] = 'Punch out (First Punch Card).';
    _n['a_tier0_10'] = 'Just enough for hallo world (10 Punch Card).';
