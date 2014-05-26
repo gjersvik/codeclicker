@@ -69,6 +69,10 @@ class Names{
    _n['r_tier7_x2_1'] = 'Artificial universe. (x2 Cosmological Computers output)';
    _n['r_tier7_x2_2'] = 'Big bang as a service. (x2 Cosmological Computers output)';
    _n['r_tier7_x4_0'] = 'Multiple multiversees (x4 Cosmological Computers output)';
+   
+   _n['r_rockstar_0'] = 'Blogg. (+ 5% Rockstar bonus)';
+   _n['r_rockstar_1'] = 'Ninja tech. (+ 5% Rockstar bonus)';
+   _n['r_rockstar_2'] = 'Twitter Fanboys. (+ 5% Rockstar bonus)';
  
    _n['a_tier0_1'] = 'Punch out (First Punch Card).';
    _n['a_tier0_10'] = 'Just enough for hallo world (10 Punch Card).';
