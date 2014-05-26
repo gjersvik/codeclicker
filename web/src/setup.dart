@@ -49,7 +49,7 @@ setup(CodeClicker cc){
   ];
   cc.research.addAll(rockstarResearch);
   
-  
+  cc.research.sort((ra,rb) => ra.price.compareTo(rb.price));
   
   var achievements = [
     
