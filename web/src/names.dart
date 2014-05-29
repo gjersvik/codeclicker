@@ -85,6 +85,12 @@ class Names{
    _n['a_tier1_25']  = 'Monkey reserve (25 Code Monkeys).';
    _n['a_tier1_50']  = 'Jane Goodall. (50 Code Monkeys).';
    _n['a_tier1_100'] = 'Infinite monkey theorem. (100 Code Monkeys).';
+   
+   _n['a_tier2_1']   = 'Under my desk. (First Servers).';
+   _n['a_tier2_10']  = 'A full rack. (10 Servers).';
+   _n['a_tier2_25']  = 'Where is my backup? (25 Servers).';
+   _n['a_tier2_50']  = 'Called 2 am. (50 Servers).';
+   _n['a_tier2_100'] = 'Datacenter master. (100 Servers).';
   }
   
   get(String id){
