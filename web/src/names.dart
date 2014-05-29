@@ -97,6 +97,12 @@ class Names{
    _n['a_tier3_25']  = 'Botnet wrangler. (25 Hackers).';
    _n['a_tier3_50']  = 'Hacktivist. (50 Hackers).';
    _n['a_tier3_100'] = 'Advanced persistent threat. (100 Hackers).';
+   
+   _n['a_tier4_1']   = 'Entrepreneur (First Start Up).';
+   _n['a_tier4_10']  = 'Serial entrepreneur. (10 Start Ups).';
+   _n['a_tier4_25']  = 'Angel investor. (25 Start Ups).';
+   _n['a_tier4_50']  = 'Incubator. (50 Start Ups).';
+   _n['a_tier4_100'] = 'Venture capitalist. (100 Start Ups).';
   }
   
   get(String id){
