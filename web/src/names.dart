@@ -98,11 +98,17 @@ class Names{
    _n['a_tier3_50']  = 'Hacktivist. (50 Hackers).';
    _n['a_tier3_100'] = 'Advanced persistent threat. (100 Hackers).';
    
-   _n['a_tier4_1']   = 'Entrepreneur (First Start Up).';
+   _n['a_tier4_1']   = 'Entrepreneur. (First Start Up).';
    _n['a_tier4_10']  = 'Serial entrepreneur. (10 Start Ups).';
    _n['a_tier4_25']  = 'Angel investor. (25 Start Ups).';
    _n['a_tier4_50']  = 'Incubator. (50 Start Ups).';
    _n['a_tier4_100'] = 'Venture capitalist. (100 Start Ups).';
+   
+   _n['a_tier5_1']   = 'My first utility. (First Cloud).';
+   _n['a_tier5_10']  = 'Everything automated. (10 Clouds).';
+   _n['a_tier5_25']  = 'Elastic master. (25 Clouds).';
+   _n['a_tier5_50']  = 'Grid of Grids. (50 Clouds).';
+   _n['a_tier5_100'] = 'It was a dark and stormy night. (100 Clouds).';
   }
   
   get(String id){
