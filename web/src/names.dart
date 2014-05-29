@@ -86,11 +86,17 @@ class Names{
    _n['a_tier1_50']  = 'Jane Goodall. (50 Code Monkeys).';
    _n['a_tier1_100'] = 'Infinite monkey theorem. (100 Code Monkeys).';
    
-   _n['a_tier2_1']   = 'Under my desk. (First Servers).';
+   _n['a_tier2_1']   = 'Under my desk. (First Server).';
    _n['a_tier2_10']  = 'A full rack. (10 Servers).';
    _n['a_tier2_25']  = 'Where is my backup? (25 Servers).';
    _n['a_tier2_50']  = 'Called 2 am. (50 Servers).';
    _n['a_tier2_100'] = 'Datacenter master. (100 Servers).';
+   
+   _n['a_tier3_1']   = 'Script kiddie. (First Hacker).';
+   _n['a_tier3_10']  = 'DDOS cannon. (10 Hackers).';
+   _n['a_tier3_25']  = 'Botnet wrangler. (25 Hackers).';
+   _n['a_tier3_50']  = 'Hacktivist. (50 Hackers).';
+   _n['a_tier3_100'] = 'Advanced persistent threat. (100 Hackers).';
   }
   
   get(String id){
