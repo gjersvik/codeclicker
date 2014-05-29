@@ -115,6 +115,12 @@ class Names{
    _n['a_tier6_25']  = 'New race. (25 A.I.).';
    _n['a_tier6_50']  = '1 million IQ. (50 A.I.).';
    _n['a_tier6_100'] = 'Kill all humans. (100 A.I.).';
+   
+   _n['a_tier7_1']   = 'Cosmic power. (First Cosmological Computer).';
+   _n['a_tier7_10']  = 'Multiverse. (10 Cosmological Computers).';
+   _n['a_tier7_25']  = 'Utimate power. (25 Cosmological Computers).';
+   _n['a_tier7_50']  = 'Omniscience. (50 Cosmological Computers).';
+   _n['a_tier7_100'] = 'Dude get a life. (100 Cosmological Computers).';
   }
   
   get(String id){
