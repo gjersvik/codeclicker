@@ -3,4 +3,5 @@ description: A web application
 dependencies:
   browser: any
   collection: any
+  polymer: any
   unittest: any
