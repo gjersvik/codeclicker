@@ -5,34 +5,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codeclicker</title>
+    
+    <script src="packages/web_components/platform.js"></script>
+    <script src="packages/web_components/dart_support.js"></script>
+    
+    <link rel="import" href="packages/polymer/polymer.html">
+    
     <link rel="stylesheet" href="codeclicker.css">
   </head>
-  <body>
-    <h1>Code Clicker</h1>
-    <p>Lines of code: <span class="loc"></span></p>
-    <p>Lines per sec: <span class="locsec"></span></p>
-    <button class="writeline">Write new line</button>
-    
-    <h1>Code Generators</h1>
-    <table id="factory">
-      <thead>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
-    
-    <h1>Research</h1>
-    <table id="research">
-      <thead>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
-    
-    <h1>Achievements</h1>
-    <p>Rockstar bonus: <span class="rockstar"></span></p>
-    <ul id="achievement"></ul>
-    
+  <body fullbleed vertical layout>
+    <div id="factory" horizontal layout>
+      
+    </div>
+    <div id="old" flex>
+      <h1>Code Clicker</h1>
+      <p>Lines per sec: <span class="locsec"></span></p>
+      <button class="writeline">Write new line</button>
+      
+      <h1>Research</h1>
+      <table id="research">
+        <thead>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      
+      <h1>Achievements</h1>
+      <p>Rockstar bonus: <span class="rockstar"></span></p>
+      <ul id="achievement"></ul>
+    </div>
+    <div>Lines of code: <span class="loc"></span></div>
     <script type="application/dart" src="codeclicker.dart"></script>
     <script src="packages/browser/dart.js"></script>
   </body>

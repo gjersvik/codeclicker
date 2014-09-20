@@ -7,9 +7,8 @@ class View{
   View(this.cc){
     querySelectorAll(".writeline").onClick.listen((_) => cc.work());
     
-    var table = querySelector("#factory");
-    table.querySelector("thead").innerHtml = _getTableHead();
-    table.querySelector("tbody").innerHtml = _getTableBody();
+    _setupFactories();
+    
     cc.factories.asMap().forEach((int key, Factory fact){
       querySelectorAll(".buy.tier$key").onClick.listen((_) => cc.buy(fact));
     });
@@ -33,12 +32,8 @@ class View{
   update(){
     _setText(querySelectorAll(".loc"),cc.loc);
     _setText(querySelectorAll(".locsec"),cc.locs);
-    cc.factories.asMap().forEach((int key, Factory fact){
-      _setText(querySelectorAll(".price.tier$key"), fact.price);
-      _setText(querySelectorAll(".own.tier$key"), fact.own);
-      _setText(querySelectorAll(".locs.tier$key"), fact.locs);
-      _setText(querySelectorAll(".output.tier$key"), fact.output);
-    });
+    
+    _updateFactories();
     
     var map = new Map.fromIterables(
         querySelectorAll("#achievement li"), cc.achievements);
@@ -58,33 +53,32 @@ class View{
       }
     });
   }
-  
-  _getTableHead(){
-    return """<tr>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Owns</th>
-        <th>Buy</th>
-        <th>loc/s</th>
-        <th>Output</th>
-      </tr>""";
+    
+  _setupFactories(){
+    var elem = querySelector("#factory");     
+    
+    elem.children.addAll(cc.factories.map((Factory fact){
+      var id = fact.id;
+      var button = new ButtonElement();
+      button.attributes['flex'] = '';
+      button.attributes['one'] = '';
+      button.classes.addAll(['buy', id]);
+      button.innerHtml =  """<span class="own $id"></span><br>
+        <span class="name $id">${names.get(id)}</span><br>
+        <span class="price $id"></span> locs.""";
+      button.onClick.listen((_) => cc.buy(fact));
+      
+      return button;
+    }));
   }
   
-  _getTableBody(){
-    var body = "";
-    for( var i = 0; i < cc.factories.length; i += 1){
-      var fact =  cc.factories[i];
-      var id = fact.id;
-      body += """<tr>
-      <td class="name $id">${names.get(id)}</td>
-      <td class="price $id"></td>
-      <td class="own $id"></td>
-      <td><button class="buy $id">Buy</button></td>
-      <td class="locs $id"></td>
-      <td class="output $id"></td>
-    </tr>""";
-    }
-    return body;
+  _updateFactories(){
+    cc.factories.asMap().forEach((int key, Factory fact){
+      _setText(querySelectorAll(".price.tier$key"), fact.price);
+      _setText(querySelectorAll(".own.tier$key"), fact.own);
+      _setText(querySelectorAll(".locs.tier$key"), fact.locs);
+      _setText(querySelectorAll(".output.tier$key"), fact.output);
+    });
   }
   
   _getResearchHead(){

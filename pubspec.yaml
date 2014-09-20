@@ -5,3 +5,6 @@ dependencies:
   collection: any
   polymer: any
   unittest: any
+transformers:
+- polymer:
+    entry_points: web/index.html
