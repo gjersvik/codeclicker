@@ -9,10 +9,6 @@ class View{
     
     _setupFactories();
     
-    cc.factories.asMap().forEach((int key, Factory fact){
-      querySelectorAll(".buy.tier$key").onClick.listen((_) => cc.buy(fact));
-    });
-    
     querySelector("#achievement").innerHtml = _getAchievementList();
     
     querySelector("#research thead").innerHtml = _getResearchHead();
