@@ -17,22 +17,35 @@
     <div id="factory" horizontal layout>
       
     </div>
-    <div id="old" flex>
-      <h1>Code Clicker</h1>
-      <p>Lines per sec: <span class="locsec"></span></p>
-      <button class="writeline">Write new line</button>
+    <div flex relative>
+      <div horizontal layout fit>
+        <div class="line" flex one></div>
+        <div class="line" flex one></div>
+        <div class="line" flex one></div>
+        <div class="line" flex one></div>
+        <div class="line" flex one></div>
+        <div class="line" flex one></div>
+        <div class="line" flex one></div>
+        <div class="line" flex one></div>
+      </div>
       
-      <h1>Research</h1>
-      <table id="research">
-        <thead>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
-      
-      <h1>Achievements</h1>
-      <p>Rockstar bonus: <span class="rockstar"></span></p>
-      <ul id="achievement"></ul>
+      <div id="old">
+        <h1>Code Clicker</h1>
+        <p>Lines per sec: <span class="locsec"></span></p>
+        <button class="writeline">Write new line</button>
+        
+        <h1>Research</h1>
+        <table id="research">
+          <thead>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+        
+        <h1>Achievements</h1>
+        <p>Rockstar bonus: <span class="rockstar"></span></p>
+        <ul id="achievement"></ul>
+      </div>
     </div>
     <div id="locs"><span class="loc"></span> locs</div>
     
