@@ -29,22 +29,28 @@
         <div class="line" flex one></div>
       </div>
       
-      <div id="old">
-        <h1>Code Clicker</h1>
-        <p>Lines per sec: <span class="locsec"></span></p>
+      <div class="dialog" vertical layout>
+        <div horizontal layout>
+          <button id="r_button" flex>Research</button>
+          <button id="a_button" flex>Achievements</button>
+        </div>
+        
+        <div id="r_cont" flex class="scroll">
+          <h1>Research</h1>
+          <table id="research">
+            <thead>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+        
+        <div id="a_cont" class="scroll" flex hidden>
+          <h1>Achievements</h1>
+          <p>Rockstar bonus: <span class="rockstar"></span></p>
+          <ul id="achievement"></ul>
+        </div>
         <button class="writeline">Write new line</button>
-        
-        <h1>Research</h1>
-        <table id="research">
-          <thead>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
-        
-        <h1>Achievements</h1>
-        <p>Rockstar bonus: <span class="rockstar"></span></p>
-        <ul id="achievement"></ul>
       </div>
     </div>
     <div id="locs"><span class="loc"></span> locs</div>

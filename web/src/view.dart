@@ -7,6 +7,16 @@ class View{
   View(this.cc){
     querySelectorAll(".writeline").onClick.listen((_) => cc.work());
     
+    querySelector("#r_button").onClick.listen((_){
+      querySelector("#r_cont").attributes.remove('hidden');
+      querySelector("#a_cont").attributes['hidden'] = '';
+    });
+    
+    querySelector("#a_button").onClick.listen((_){
+      querySelector("#a_cont").attributes.remove('hidden');
+      querySelector("#r_cont").attributes['hidden'] = '';
+    });
+    
     _setupFactories();
     
     querySelector("#achievement").innerHtml = _getAchievementList();

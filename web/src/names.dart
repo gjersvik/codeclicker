@@ -110,7 +110,7 @@ class Names{
    _n['a_tier5_50']  = 'Grid of Grids. (50 Clouds).';
    _n['a_tier5_100'] = 'It was a dark and stormy night. (100 Clouds).';
    
-   _n['a_tier6_1']   = 'It is alive. (First A.I.).';
+   _n['a_tier6_1']   = 'It\'s alive. (First A.I.).';
    _n['a_tier6_10']  = 'A family unit. (10 A.I.).';
    _n['a_tier6_25']  = 'New race. (25 A.I.).';
    _n['a_tier6_50']  = '1 million IQ. (50 A.I.).';
