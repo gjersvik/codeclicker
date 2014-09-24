@@ -10,6 +10,7 @@
     <script src="packages/web_components/dart_support.js"></script>
     
     <link rel="import" href="packages/polymer/polymer.html">
+    <link rel="import" href="elem/loc_counter.html">
     
     <link rel="stylesheet" href="codeclicker.css">
   </head>
@@ -53,7 +54,7 @@
         <button class="writeline">Write new line</button>
       </div>
     </div>
-    <div id="locs"><span class="loc"></span> locs</div>
+    <loc-counter id="locs" locs="0"></loc-counter>
     
     <script type="application/dart" src="codeclicker.dart"></script>
     <script src="packages/browser/dart.js"></script>

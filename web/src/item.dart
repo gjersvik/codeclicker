@@ -1,6 +1,6 @@
 part of codeclicker;
 
 class Item{
-  final id;
+  final String id;
   Item(this.id);
 }
