@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <link rel="import" href="../packages/polymer/polymer.html">
-<polymer-element name="loc-counter" attributes="locs" noscript>
+<polymer-element name="loc-counter">
   <template>
-    {{locs}} locs
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
   </template>
+  <script type="application/dart" src="loc_counter.dart"></script>
 </polymer-element>
