@@ -20,11 +20,6 @@ body {
   overflow: auto;
 }
 
-#locs{
-  font-size: 400%;
-  text-align: right;
-}
-
 .line{
   border-left: solid black 1px;
   border-right: solid black 1px;
