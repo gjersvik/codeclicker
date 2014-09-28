@@ -1,13 +1,11 @@
 import 'package:polymer/polymer.dart';
-import 'dart:html';
 
 @CustomTag('loc-counter')
 class LocCounterElement extends PolymerElement {
   @published int locs = 0;
-  @observable List<String> chars = new ObservableList(24);
+  @observable List<String> chars = toObservable(new List.filled(24, '0'));
 
   LocCounterElement.created() : super.created(){
-    chars.fillRange(0, 24, '0');
     chars[21] = 'L';
     chars[22] = 'o';
     chars[23] = 'c';
