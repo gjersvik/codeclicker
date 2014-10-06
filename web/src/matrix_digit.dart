@@ -1,36 +1,25 @@
-import 'package:polymer/polymer.dart';
-import 'dart:html';
+part of codeclicker;
 
-@CustomTag('matrix-digit')
-class MatrixDigitElement extends PolymerElement {
-  @published String color = 'green';
-  @published String char = '';
+class MatrixDigitView{
+  CanvasElement elem;
+  String color = 'green';
+  String char = '0';
   
   CanvasRenderingContext2D _p;
-  CanvasElement _c;
   
   int _w = 0;
   int _h = 0;
 
-  MatrixDigitElement.created() : super.created();
-  
-  void attached(){
-    super.attached();
-    _c = shadowRoot.querySelector('canvas');
-    _p = _c.getContext('2d');
-    _paint();
+  MatrixDigitView(this.elem){
+    _p = elem.getContext('2d');
   }
   
-  void charChanged(){
-    _paint();
-  }
-  
-  _paint(){
-    _w = clientWidth;
+  render(_){
+    _w = elem.clientWidth;
     _h = (_w / 3 * 5).toInt();
     
-    _c.height = _h;
-    _c.width = _w;
+    elem.height = _h;
+    elem.width = _w;
     
     _p.clearRect(0, 0, _w, _h);
     _p.fillStyle = color;

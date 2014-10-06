@@ -28,10 +28,13 @@ body {
 #locs {
   background-color: black;
 }
+
 #locs .box{
   position: relative;
   width: 100px;
 }
-#locs matrix-digit{
+
+#locs canvas{
+  display: block;
   width: 30%;
 }

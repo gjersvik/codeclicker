@@ -14,6 +14,7 @@ part "src/factory.dart";
 part "src/game_loop.dart";
 part "src/item.dart";
 part 'src/loc_counter_view.dart';
+part 'src/matrix_digit.dart';
 part "src/names.dart";
 part "src/research.dart";
 part "src/setup.dart";
