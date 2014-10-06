@@ -5,7 +5,6 @@ import "dart:math";
 import "dart:async";
 
 import "package:collection/wrappers.dart";
-import 'package:polymer/polymer.dart';
 
 part "src/achievement.dart";
 part "src/buyable.dart";
@@ -25,18 +24,14 @@ CodeClicker cc;
 View view;
 
 void main(){
-  initPolymer().run(() {
-    Polymer.onReady.then((_) {
-      var loop =  new GameLoop();
-      
-      cc = new CodeClicker();
-      setup(cc);
-      view =  new View(cc);
-      var locs = new LocCounterView(querySelector('#locs'));
-      
-      loop.onRender.listen((_) => cc.update());
-      loop.onRender.listen((_) => view.update());
-      loop.onRender.listen(locs.render);
-    });
-  });
+  var loop =  new GameLoop();
+  
+  cc = new CodeClicker();
+  setup(cc);
+  view =  new View(cc);
+  var locs = new LocCounterView(querySelector('#locs'));
+  
+  loop.onRender.listen((_) => cc.update());
+  loop.onRender.listen((_) => view.update());
+  loop.onRender.listen(locs.render);
 }

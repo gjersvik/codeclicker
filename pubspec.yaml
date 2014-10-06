@@ -4,6 +4,3 @@ dependencies:
   browser: any
   collection: any
   polymer: any
-transformers:
-- polymer:
-    entry_points: web/index.html
