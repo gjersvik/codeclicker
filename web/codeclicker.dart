@@ -2,6 +2,7 @@ library codeclicker;
 
 import "dart:html";
 import "dart:math";
+import "dart:async";
 
 import "package:collection/wrappers.dart";
 import 'package:polymer/polymer.dart';
@@ -10,6 +11,7 @@ part "src/achievement.dart";
 part "src/buyable.dart";
 part "src/codeclicker.dart";
 part "src/factory.dart";
+part "src/game_loop.dart";
 part "src/item.dart";
 part "src/names.dart";
 part "src/research.dart";
@@ -23,17 +25,14 @@ View view;
 void main(){
   initPolymer().run(() {
     Polymer.onReady.then((_) {
+      var loop =  new GameLoop();
+      
       cc = new CodeClicker();
       setup(cc);
       view =  new View(cc);
       
-      gameLoop([_]){
-        cc.update();
-        view.update();
-        window.animationFrame.then(gameLoop);
-      }
-      
-      window.animationFrame.then(gameLoop);
+      loop.onRender.listen((_) => cc.update());
+      loop.onRender.listen((_) => view.update());
     });
   });
 }
