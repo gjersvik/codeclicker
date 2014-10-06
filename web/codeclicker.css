@@ -24,3 +24,14 @@ body {
   border-left: solid black 1px;
   border-right: solid black 1px;
 }
+
+#locs {
+  background-color: black;
+}
+#locs .box{
+  position: relative;
+  width: 100px;
+}
+#locs matrix-digit{
+  width: 30%;
+}

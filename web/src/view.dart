@@ -36,7 +36,6 @@ class View{
   }
   
   update(){
-    querySelector('loc-counter').attributes['locs'] = cc.loc.toString();
     _setText(querySelectorAll(".loc"),cc.loc);
     _setText(querySelectorAll(".locsec"),cc.locs);
     

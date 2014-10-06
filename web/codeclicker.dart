@@ -13,6 +13,7 @@ part "src/codeclicker.dart";
 part "src/factory.dart";
 part "src/game_loop.dart";
 part "src/item.dart";
+part 'src/loc_counter_view.dart';
 part "src/names.dart";
 part "src/research.dart";
 part "src/setup.dart";
@@ -30,9 +31,11 @@ void main(){
       cc = new CodeClicker();
       setup(cc);
       view =  new View(cc);
+      var locs = new LocCounterView(querySelector('#locs'));
       
       loop.onRender.listen((_) => cc.update());
       loop.onRender.listen((_) => view.update());
+      loop.onRender.listen(locs.render);
     });
   });
 }
