@@ -30,8 +30,6 @@ body {
 }
 
 #locs .box{
-  position: relative;
-  width: 100px;
 }
 
 #locs canvas{
