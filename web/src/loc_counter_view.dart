@@ -11,10 +11,10 @@ class LocCounterView {
   LocCounterView(this.elem) {
     _updateBoxWidth();
     _digits = elem.querySelectorAll('canvas').map((e) => new MatrixDigitView(e)).toList();
-    
     elem.style.display = 'none';
-    elem.offsetHeight;
-    elem.style.display = '';
+    Timer.run((){
+      elem.style.display = '';
+    });
     
     chars[21] = 'L';
     chars[22] = 'o';
