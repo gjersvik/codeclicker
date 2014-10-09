@@ -3,7 +3,6 @@ description: A web application
 dependencies:
   browser: any
   collection: any
-  polymer: any
   sass: any
 transformers:
   - sass:

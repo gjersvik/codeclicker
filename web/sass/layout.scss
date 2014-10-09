@@ -13,3 +13,7 @@
   @extend %box;
   @include flex-direction(column);
 }
+
+[flex]{
+  @include flex(1)
+}

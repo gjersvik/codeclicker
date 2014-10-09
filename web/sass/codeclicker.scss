@@ -16,6 +16,25 @@ body{
   
 }
 
+.center{
+  position: relative;
+  @include flex(1);
+}
+
+.lines{
+  @extend .hbox;
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  .line{
+    border-left: solid black 1px;
+    border-right: solid black 1px;
+    @include flex(1);
+  }
+}
+
 .dialog{
   position: absolute;
   left: 20%;
@@ -29,10 +48,6 @@ body{
   overflow: auto;
 }
 
-.line{
-  border-left: solid black 1px;
-  border-right: solid black 1px;
-}
 
 #locs {
   @extend .hbox;
