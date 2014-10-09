@@ -4,3 +4,8 @@ dependencies:
   browser: any
   collection: any
   polymer: any
+  sass: any
+transformers:
+  - sass:
+      executable: sass.bat
+      compass: true
