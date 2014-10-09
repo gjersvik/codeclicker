@@ -9,14 +9,14 @@
     <script src="packages/web_components/platform.js"></script>
     <link rel="import" href="packages/polymer/polymer.html">
     
-    <link rel="stylesheet" href="codeclicker.css">
+    <link rel="stylesheet" href="sass/codeclicker.css">
   </head>
-  <body fullbleed vertical layout>
+  <body class="vbox">
     <div id="factory" horizontal layout>
       
     </div>
     <div flex relative>
-      <div horizontal layout fit>
+      <div class="hbox" fit>
         <div class="line" flex one></div>
         <div class="line" flex one></div>
         <div class="line" flex one></div>
@@ -27,8 +27,8 @@
         <div class="line" flex one></div>
       </div>
       
-      <div class="dialog" vertical layout>
-        <div horizontal layout>
+      <div class="dialog vbox">
+        <div class="hbox">
           <button id="r_button" flex>Research</button>
           <button id="a_button" flex>Achievements</button>
         </div>
@@ -51,29 +51,29 @@
         <button class="writeline">Write new line</button>
       </div>
     </div>
-    <div id="locs" horizontal layout around-justified>
-      <div class="box" horizontal layout justified>
+    <div id="locs">
+      <div class="box">
         <canvas></canvas><canvas></canvas><canvas></canvas>
       </div>
-      <div class="box" horizontal layout justified>
+      <div class="box">
         <canvas></canvas><canvas></canvas><canvas></canvas>
       </div>
-      <div class="box" horizontal layout justified>
+      <div class="box">
         <canvas></canvas><canvas></canvas><canvas></canvas>
       </div>
-      <div class="box" horizontal layout justified>
+      <div class="box">
         <canvas></canvas><canvas></canvas><canvas></canvas>
       </div>
-      <div class="box" horizontal layout justified>
+      <div class="box">
         <canvas></canvas><canvas></canvas><canvas></canvas>
       </div>
-      <div class="box" horizontal layout justified>
+      <div class="box">
         <canvas></canvas><canvas></canvas><canvas></canvas>
       </div>
-      <div class="box" horizontal layout justified>
+      <div class="box">
         <canvas></canvas><canvas></canvas><canvas></canvas>
       </div>
-      <div class="box" horizontal layout justified>
+      <div class="box">
         <canvas></canvas><canvas></canvas><canvas></canvas>
       </div>
     </div>
