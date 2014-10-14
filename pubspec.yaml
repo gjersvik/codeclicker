@@ -6,5 +6,5 @@ dependencies:
   sass: any
 transformers:
   - sass:
-      executable: sass.bat
       compass: true
+      style: compressed 
