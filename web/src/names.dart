@@ -121,15 +121,30 @@ class Names{
    _n['a_tier7_25']  = 'Utimate power. (25 Cosmological Computers).';
    _n['a_tier7_50']  = 'Omniscience. (50 Cosmological Computers).';
    _n['a_tier7_100'] = 'Dude get a life. (100 Cosmological Computers).';
+   
+   _n['line_button'] = {1: 'Write a line of code.',
+                        null : 'Write # lines of code'};
   }
   
-  get(String id){
-    var name = _n[id];
-    
-    if(name == null){
-      name = id;
+  get(String id, [int value]){
+    if(value == null){
+      return _simpleGet(id);
+    }
+    var n = _n[id];
+    if(n is Map){
+      if(n.containsKey(value)){
+        n = n[value];
+      }else{
+        n = n[null];
+      }
     }
     
-    return name;
+    if(n is String){
+      return n.replaceAll('#', value.toString());
+    }
+    
+    return id;
   }
+  
+  _simpleGet(id) => _n.containsKey(id) ? _n[id] : id;
 }

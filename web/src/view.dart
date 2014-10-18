@@ -5,7 +5,7 @@ class View{
   Names names = new Names();
   
   View(this.cc){
-    querySelectorAll(".writeline").onClick.listen((_) => cc.work());
+    querySelectorAll(".line_button").onClick.listen((_) => cc.work());
     
     querySelector("#r_button").onClick.listen((_){
       querySelector("#r_cont").attributes.remove('hidden');
@@ -50,6 +50,9 @@ class View{
     });
     
     _setText(querySelectorAll(".rockstar"),cc.achievements.rockstar);
+    
+    _setText(querySelectorAll(".line_button"),
+        names.get('line_button',cc.perClick.floor()));
   }
   
   _setText(ElementList list, Object value){
