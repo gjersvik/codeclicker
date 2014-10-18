@@ -1,4 +1,5 @@
 @import "_layout.scss";
+@import "_linebutton.scss";
 
 $primary-color: #F8F8F8;
 
@@ -12,8 +13,6 @@ body{
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: normal;
-  
-  
 }
 
 .center{
@@ -41,7 +40,8 @@ body{
   right:20%;
   top: 20%;
   bottom: 20%;
-  background-color: rgba($primary-color,0.9);
+  background-color: $primary-color;
+  opacity: 0.9
 }
 
 .scroll{
