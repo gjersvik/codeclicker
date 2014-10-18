@@ -1,0 +1,64 @@
+@import "_layout.scss";
+
+$primary-color: #F8F8F8;
+
+html, body{
+  margin: 0;
+  height: 100%;
+}
+
+body{
+  background-color: $primary-color;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  
+  
+}
+
+.center{
+  position: relative;
+  @include flex(1);
+}
+
+.lines{
+  @extend .hbox;
+  position: absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  .line{
+    border-left: solid black 1px;
+    border-right: solid black 1px;
+    @include flex(1);
+  }
+}
+
+.dialog{
+  position: absolute;
+  left: 20%;
+  right:20%;
+  top: 20%;
+  bottom: 20%;
+  background-color: rgba($primary-color,0.9);
+}
+
+.scroll{
+  overflow: auto;
+}
+
+
+#locs {
+  @extend .hbox;
+  @include justify-content(space-around);
+  background-color: black;
+  .box{
+    @extend .hbox;
+    @include justify-content(space-between);
+  }
+  canvas{
+    display: block;
+    width: 30%;
+  }
+}

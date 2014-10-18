@@ -2,3 +2,9 @@ name: codeclicker
 description: A web application
 dependencies:
   browser: any
+  collection: any
+  sass: any
+transformers:
+  - sass:
+      compass: true
+      style: compressed 

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codeclicker</title>
+    
+    <link rel="stylesheet" href="sass/codeclicker.css">
+  </head>
+  <body class="vbox">
+    <div id="factory" class="hbox">
+      
+    </div>
+    <div class='center'>
+      <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      
+      <div class="dialog vbox">
+        <div class="hbox">
+          <button id="r_button" flex>Research</button>
+          <button id="a_button" flex>Achievements</button>
+        </div>
+        
+        <div id="r_cont" flex class="scroll">
+          <h1>Research</h1>
+          <table id="research">
+            <thead>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+        
+        <div id="a_cont" class="scroll" flex hidden>
+          <h1>Achievements</h1>
+          <p>Rockstar bonus: <span class="rockstar"></span></p>
+          <ul id="achievement"></ul>
+        </div>
+        <button class="writeline">Write new line</button>
+      </div>
+    </div>
+    <div id="locs">
+      <div class="box">
+        <canvas></canvas><canvas></canvas><canvas></canvas>
+      </div>
+      <div class="box">
+        <canvas></canvas><canvas></canvas><canvas></canvas>
+      </div>
+      <div class="box">
+        <canvas></canvas><canvas></canvas><canvas></canvas>
+      </div>
+      <div class="box">
+        <canvas></canvas><canvas></canvas><canvas></canvas>
+      </div>
+      <div class="box">
+        <canvas></canvas><canvas></canvas><canvas></canvas>
+      </div>
+      <div class="box">
+        <canvas></canvas><canvas></canvas><canvas></canvas>
+      </div>
+      <div class="box">
+        <canvas></canvas><canvas></canvas><canvas></canvas>
+      </div>
+      <div class="box">
+        <canvas></canvas><canvas></canvas><canvas></canvas>
+      </div>
+    </div>
+    
+    <script type="application/dart" src="codeclicker.dart"></script>
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>

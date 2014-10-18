@@ -1,0 +1,19 @@
+@import "compass/css3/flexbox";
+
+%box{
+  @include display-flex;
+}
+
+.hbox{
+  @extend %box;
+  @include flex-direction(row);
+}
+
+.vbox{
+  @extend %box;
+  @include flex-direction(column);
+}
+
+[flex]{
+  @include flex(1)
+}
